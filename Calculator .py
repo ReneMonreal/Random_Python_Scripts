@@ -1,5 +1,4 @@
-#This is the first version i created when i was learning how to code in python, please view "Updated Calculator" for the new method.
-
+#This is the first version i created when i was learning how to code in python.
 #Creating processes that run based on the answer
 def add(a, b):
     answer = a + b
