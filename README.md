@@ -1,2 +1,1 @@
-#This Calculator.py Repository was made for fun.
-<h1>Created for fun</h1>
+<h2> This Calculator progam taught me the basics for when it came to operators and using logic</h2>
