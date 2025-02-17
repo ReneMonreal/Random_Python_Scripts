@@ -1,0 +1,38 @@
+import random
+
+def HighandLowGame():
+  random_num = random.randint(1,50)
+  print("Try to guess the number that I am thinking of between 1 and 50.")
+  print("You have 5 chances to guess the number! ")
+  guess = 0
+  attempt = 1
+  status = False
+
+  while attempt <= 5:
+
+    guess = int(input(f'Attempt #{attempt}; Please enter your guess: '))
+    if guess <= 50:
+      if guess > random_num:
+        print(f'Attempt #{attempt}: {guess} is to high, try lower')
+      elif guess < random_num:
+        print(f'Attempt #{attempt}: {guess} is to Low, try Higher')
+      elif guess == random_num:
+        print(f'Attempt #{attempt }: {guess} is the secret number, you won!!!')
+        attempt = 5
+        status = True
+        break
+
+    elif guess > 50:
+      print("Please select a number within range")
+      continue
+
+    attempt += 1
+  if not status:
+    print("You lost: Thank you for playing.")
+
+
+
+
+
+if __name__ == "__main__":
+  HighandLowGame()
