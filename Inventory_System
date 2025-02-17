@@ -1,0 +1,27 @@
+def InventorySystem():
+  Inventory = {'Apples': 130, "Bannas":100, "Watermellon": 53} 
+  print(f'Current Inventory: {Inventory}')
+
+  ImportFruit = str(input("Enter Latest fruit Shipment Recived: "))
+  ImportQuantity = int(input(f'Enter quantity of {ImportFruit}: '))
+  if ImportFruit in Inventory:
+    Inventory[ImportFruit] += ImportQuantity
+  else:
+    Inventory[ImportFruit] = ImportQuantity
+  print(f'Updated Inventory: {Inventory}')
+
+
+
+  discontinuedFruit = str(input("Enter fruit being discontinued at store: "))
+  if discontinuedFruit in Inventory:
+    del Inventory[discontinuedFruit]
+    print(f'{discontinuedFruit} no longer carried in the store')
+  else:
+    print(f'{discontinuedFruit} already not carried in store')
+  print(f'Updated Inventory: {Inventory}')
+
+     
+
+
+if __name__ == "__main__":
+  InventorySystem()
